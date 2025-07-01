@@ -220,7 +220,7 @@ async def generate_story_content(story_id: int, story_data: dict, db: Session, r
             request_id=request_id
         )
 
-@router.get("/", response_model=List[schemas.StoryList])
+@router.get("", response_model=List[schemas.StoryList])
 def list_stories(
     skip: int = 0,
     limit: int = 20,
