@@ -473,7 +473,7 @@ Create a detailed, child-friendly image prompt that captures the magical essence
                         quality="hd",  # Higher quality for better consistency
                         size="1024x1024"  # Square format for better UI display
                     ),
-                    timeout=60.0  # 60 second timeout
+                    timeout=120.0  # 60 second timeout
                 )
             except asyncio.TimeoutError:
                 raise Exception("Image generation timed out after 60 seconds")
