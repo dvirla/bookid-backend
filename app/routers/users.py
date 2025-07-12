@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-import models
-import schemas
-from database import get_db
-from auth import get_current_user
+import app.models as models
+import app.schemas as schemas
+from app.database import get_db
+from app.auth import get_current_user
 
 router = APIRouter(prefix="/user", tags=["users"])
 

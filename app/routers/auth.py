@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from datetime import timedelta
-import models
-import schemas
-from database import get_db
-from auth import verify_google_token, create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES, get_current_user
+import app.models as models
+import app.schemas as schemas
+from app.database import get_db
+from app.auth import verify_google_token, create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES, get_current_user
 import logging
 from sqlalchemy.exc import SQLAlchemyError
 from typing import Dict, Any

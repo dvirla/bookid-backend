@@ -2,9 +2,9 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
-from routers import auth, users, stories
-from database import engine
-import models
+from app.routers import auth, users, stories
+from app.database import engine
+import app.models as models
 import os
 from dotenv import load_dotenv
 

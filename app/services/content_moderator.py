@@ -7,7 +7,7 @@ import os
 import time
 import uuid
 from dotenv import load_dotenv
-from utils.logger import story_logger
+from app.utils.logger import story_logger
 import logfire
 import httpx
 
