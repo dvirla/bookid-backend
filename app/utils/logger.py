@@ -5,6 +5,9 @@ from typing import Dict, Any, Optional
 import json
 import os
 
+# Ensure logs directory exists before any logging
+os.makedirs('logs', exist_ok=True)
+
 class StoryLogger:
     """Centralized logging for story creation flow"""
     
@@ -142,6 +145,3 @@ class StoryLogger:
 
 # Global logger instance
 story_logger = StoryLogger()
-
-# Create logs directory if it doesn't exist
-os.makedirs('logs', exist_ok=True)
