@@ -8,7 +8,7 @@ import time
 import uuid
 import asyncio
 from dotenv import load_dotenv
-from utils.logger import story_logger
+from app.utils.logger import story_logger
 import logfire
 from openai import AzureOpenAI
 import json
@@ -100,7 +100,212 @@ NARRATIVE STRUCTURE:
 - Engaging middle with challenges and character growth
 - Satisfying resolution that reinforces the story's message
 - Smooth transitions between pages that maintain engagement
-- Each page should advance the story meaningfully"""
+
+ADDITIONAL STORYTELLING INSTRUCTIONS:
+- Ensure the main character's personality, appearance, and relationships remain consistent throughout the story.
+- Reuse important locations, objects, or side characters to create a sense of a living world.
+- Use imaginative language, metaphors, and sensory details to make scenes come alive.
+- Introduce small details early that become important later (foreshadowing).
+
+EXAMPLES:
+
+Example 1 - The Mouse and the Bear (story about friendship and compassion)
+It was sunny that day
+in the woods by the stream,
+where the trees whispered softly,
+like a sweet forest dream.
+
+Little Mouse walked alone
+with her small bag of cheese,
+when she heard someone crying
+beneath the tall trees.
+
+She peeked round a bush
+and she saw sitting there,
+with tears rolling down,
+a big, furry Bear.
+
+"Oh my," said the Mouse,
+"You're so big, strong, and tall!
+Why ever, dear Bear,
+do you cry tears at all?"
+
+Bear sniffled and whimpered,
+he wiped at his eyes.
+"I've lost all my honey!
+Now there’s none for my pies."
+
+Mouse felt sad for the Bear
+and said, "Please don't despair!
+Together we'll find it—
+I promise, I swear!"
+
+So off went the Mouse
+with her big, furry friend,
+on an adventure that neither
+wanted ever to end.
+
+They searched high and low,
+under rocks, over hills.
+They looked near the river
+by the sweet daffodils.
+
+Then a rustle and flutter
+came out of the trees.
+"Have you seen Bear’s honey?"
+Mouse asked passing bees.
+
+"No honey here,"
+buzzed the bees with a sigh.
+"But follow us quickly—
+we'll look from the sky!"
+
+So onward they marched,
+the Mouse, Bear, and bees,
+through sunshine and shade
+and a soft gentle breeze.
+
+Then, there by the river
+on logs piled up tight,
+they spotted Bear’s honey—
+oh, what a sweet sight!
+
+But under the honey,
+something else moved about—
+a tiny lost bunny
+who couldn't get out!
+
+Bear lifted the logs
+with his big gentle paws.
+"Be careful," squeaked Mouse,
+"Watch your toes, watch your claws!"
+
+Soon bunny was free
+with a leap and a cheer.
+"Oh, thank you, dear Bear!
+You're my hero this year!"
+
+Bear smiled and blushed
+as Mouse laughed with delight.
+Their friendship had grown
+on this brave, sunny flight.
+
+Then Bear turned to Mouse,
+"You have shown me today,
+that kindness and friendship
+can brighten our way."
+
+Mouse nodded and smiled,
+with her heart warm and full,
+"We help one another—
+that’s our golden rule."
+
+So homeward they walked,
+Bear, Bunny, and Mouse.
+They shared Bear’s sweet honey
+at Mouse’s small house.
+
+Under trees bright with stars,
+they laughed side by side.
+Friendship and compassion,
+their hearts filled with pride.
+
+Example 2 - The Dog with a Frog (story about the importance of imagination)
+It was raining outside.
+There was nothing to do.
+We stared out the window,
+just me, and then you.
+
+The toys were no fun,
+and the games seemed too slow.
+When suddenly, we heard,
+a loud knock—"Hello!"
+
+Who knocked at the door?
+Should we open and see?
+"Don't open!" said the hamster.
+(We called him Sir Squee.)
+
+But open we did,
+and right there stood a dog,
+With a hat very tall
+and atop it—a frog!
+
+He smiled and he bowed
+with a tip of his hat.
+"Hello, friends!" he barked,
+"Are you busy like that?"
+
+"It's boring," I sighed.
+"And we're bored," sighed my brother.
+"Well then," said the dog,
+"You should meet one another!"
+
+He reached for his hat,
+gave a tug and a twist,
+and out popped some monkeys,
+too many to list!
+
+They danced and they leaped,
+spinning round in a blur.
+"Oh no!" cried Sir Squee,
+"What a mess—what a stir!"
+
+The monkeys grabbed toys
+and spun plates on their tails,
+they juggled our pillows,
+made forts with our pails.
+
+"Enough!" yelled Sir Squee.
+"This is too much fun!"
+But the dog and the frog
+said, "We've only begun!"
+
+Then the frog hopped up high,
+and he waved with his feet.
+"Bring in the elephants!
+Now that's quite a treat!"
+
+"No elephants, please!"
+I called out with a shout.
+But three elephants squeezed
+through the door and about.
+
+They stepped here and there,
+and they bumped walls and chairs.
+Then danced in a line,
+throwing toys everywhere!
+
+"Oh dear," said Sir Squee,
+"We must clean this before—"
+But just then, we heard,
+the click-clack at the door!
+
+"Mom and Dad have come home!"
+cried my brother in fright.
+"Don't worry!" laughed the dog,
+"We'll make everything right."
+
+With a whistle and wink
+and a flip of his hat,
+the monkeys and elephants—
+just vanished like that!
+
+Our toys were all tidy,
+and nothing misplaced.
+"Goodbye!" waved the dog,
+leaving barely a trace.
+
+We waved at the dog,
+and the frog tipped his hat.
+"Next rainy day," they said,
+"We'll return—count on that!"
+
+We smiled at each other,
+and Sir Squee said with glee,
+"No more boredom for you,
+and no boredom for me!"
+"""
         )
         
         self.image_prompt_agent = Agent(
@@ -559,7 +764,7 @@ VISUAL SPECIFICATIONS:
 
 CONSISTENCY REQUIREMENTS:
 - {consistency_details.get('consistency_note', f'Keep {hero_name} looking identical in all images')}
-- Same facial features, hair style, and clothing throughout the story
+- Same facial features, hair style, and clothing throughout
 - Consistent artistic style and color scheme
 - High-quality children's book illustration
 
